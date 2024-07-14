@@ -12,7 +12,7 @@ export async function getIngredients() {
   let cards = "";
   for (let i = 0; i < 20; i++) {
     cards += `<div class="col-12 col-sm-6 col-md-3 ingredient-card">
-                <div class="w-100 d-flex flex-column justify-content-center align-items-center text-white">
+                <div class="w-100 d-flex flex-column justify-content-center align-items-center text-white click-point">
                     <i class="fa-solid fa-drumstick-bite fa-4x"></i>
                     <h3 class="mb-0 fw-bold text-center" id="${
                       ingredients[i].strIngredient
@@ -49,7 +49,7 @@ async function filterIngredient(ingredient) {
     meals += `<div class="col-12 col-sm-6 col-md-3 meal-card">
                 <figure class="w-100 position-relative rounded-2 overflow-hidden">
                     <img class="w-100 rounded-2" src="${filterIngredient[i].strMealThumb}" alt="meal-thumb">
-                    <div class="bg-details text-black position-absolute bottom-0 start-0 end-0">
+                    <div class="bg-details text-black position-absolute bottom-0 start-0 end-0 click-point">
                         <div class="d-flex flex-column justify-content-center h-100 p-2">
                             <h3 class="mb-0 fw-bold">${filterIngredient[i].strMeal}</h3>
                         </div>

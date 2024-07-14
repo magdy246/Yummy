@@ -12,7 +12,7 @@ export async function getArea() {
   let cards = "";
   for (let i = 0; i < area.length; i++) {
     cards += `<div class="col-12 col-sm-6 col-md-3 p-3">
-      <div class="w-100 d-flex flex-column justify-content-center align-items-center text-white area-card">
+      <div class="w-100 d-flex flex-column justify-content-center align-items-center text-white area-card click-point">
         <i class="fa-solid fa-house-chimney fa-4x"></i>
         <h3 class="mb-0 fw-bold text-center" id="${area[i].strArea}">${area[i].strArea}</h3>
       </div>
@@ -42,7 +42,7 @@ export async function getArea() {
       meals += `<div class="col-12 col-sm-6 col-md-3 meal-card" id="${filteredMeals[i].idMeal}">
         <figure class="w-100 position-relative rounded-2 overflow-hidden">
           <img class="w-100 rounded-2" src="${filteredMeals[i].strMealThumb}" alt="${filteredMeals[i].strMeal}">
-          <div class="bg-details text-black position-absolute bottom-0 start-0 end-0">
+          <div class="bg-details text-black position-absolute bottom-0 start-0 end-0 click-point">
             <div class="d-flex flex-column justify-content-center h-100 p-2">
               <h3 class="mb-0 fw-bold">${filteredMeals[i].strMeal}</h3>
             </div>

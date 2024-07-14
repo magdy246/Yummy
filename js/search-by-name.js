@@ -28,7 +28,7 @@ function showCards(mealsCard) {
     <div class="col-12 col-sm-6 col-md-3 meal-card" data-meal-id="${mealsCard[i].idMeal}">
       <figure class="w-100 position-relative rounded-4 overflow-hidden">
         <img class="w-100 rounded-4" src="${mealsCard[i].strMealThumb}" alt="cuio">
-        <div class="bg-details text-black position-absolute bottom-0 start-0 end-0">
+        <div class="bg-details text-black position-absolute bottom-0 start-0 end-0 click-point">
           <div class="d-flex flex-column justify-content-center h-100">
             <h3 class="ms-2 mb-0 fw-bold">${mealsCard[i].strMeal}</h3>
           </div>

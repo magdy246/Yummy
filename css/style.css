@@ -79,6 +79,10 @@ html body {
     display: none;
 }
 
+.click-point{
+    cursor: pointer;
+}
+
 /* ^^^^^^^^^ CATEGORIES-SECTION ^^^^^^^^^ */
 #categories-section1 figure .bg-details,
 #categories-section2 figure .bg-details,
