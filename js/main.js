@@ -85,6 +85,8 @@ $("#categories").on("click", function () {
   closeMenu();
   emptyInput();
   emptyInputs();
+  $("#desc-meal-Fletter").html("");
+$("#desc-meal-name").html("");
 });
 
 // ^areaActions
@@ -109,6 +111,8 @@ $("#area").on("click", function () {
   closeMenu();
   emptyInput();
   emptyInputs();
+  $("#desc-meal-Fletter").html("");
+$("#desc-meal-name").html("");
 });
 
 // ^ingredientsActions
@@ -132,6 +136,8 @@ $("#ingredients").on("click", function () {
   closeMenu();
   emptyInput();
   emptyInputs();
+  $("#desc-meal-Fletter").html("");
+$("#desc-meal-name").html("");
 });
 
 // ^contactActions
@@ -154,6 +160,8 @@ $("#contact").on("click", function () {
   closeMenu();
   emptyInput();
   emptyInputs();
+  $("#desc-meal-Fletter").html("");
+$("#desc-meal-name").html("");
 });
 
 // ^searchActions
@@ -176,6 +184,8 @@ $("#search").on("click", function () {
   closeMenu();
   emptyInput();
   emptyInputs();
+  $("#desc-meal-Fletter").html("");
+$("#desc-meal-name").html("");
 });
 
 //^^^^^^^^^^^^^^^^^^^^^^INPUTs^^^^^^^^^^^^^^^^^^^^^^
