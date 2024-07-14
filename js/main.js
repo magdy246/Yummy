@@ -24,7 +24,9 @@ $(".list-btn").on("click", function () {
 $(".close-btn").on("click", function () {
   $("#side-bar-section .Bar").removeClass("open");
   $(".close-btn, .list-ul").fadeOut(200, function () {
-    $(".nav-side1,.nav-side2,.nav-side3,.nav-side4,.nav-side5").removeClass("up");
+    $(".nav-side1,.nav-side2,.nav-side3,.nav-side4,.nav-side5").removeClass(
+      "up"
+    );
   });
   $(".list-btn").fadeIn(200, function () {
     $(".close-btn").addClass("hidden");
@@ -32,12 +34,30 @@ $(".close-btn").on("click", function () {
   });
 });
 
+function closeMenu() {
+  $("#side-bar-section .Bar").removeClass("open");
+  $(".close-btn, .list-ul").fadeOut(200, function () {
+    $(".nav-side1,.nav-side2,.nav-side3,.nav-side4,.nav-side5").removeClass(
+      "up"
+    );
+  });
+  $(".list-btn").fadeIn(200, function () {
+    $(".close-btn").addClass("hidden");
+    $(".list-btn").removeClass("hidden");
+  });
+}
+
 //^^^^^^^^^^^^^^^^^^^^^^SIDE BAR EVENTs^^^^^^^^^^^^^^^^^^^^^^
 //! search
 //! categories
 //! area
 //! ingredients
 //! contact
+
+function emptyInput() {
+  $("#letter-input").val("");
+  $("#name-input").val("");
+}
 
 // ^hideAction
 function hideAllSections() {
@@ -52,6 +72,8 @@ $("#categories").on("click", function () {
   $("#categories-section2").addClass("d-none");
   $("#categories-section22").addClass("d-none");
   $("#categories-section222").addClass("d-none");
+  $("#categories-section4").addClass("d-none");
+  $("#categories-section6").addClass("d-none");
   $("#searchform").addClass("d-none");
   $("#inputs").addClass("d-none");
   $("#categories-section5").addClass("d-none");
@@ -60,6 +82,9 @@ $("#categories").on("click", function () {
   $("#categories-section55556").addClass("d-none");
   $("#categories-section555566").addClass("d-none");
   getCategory();
+  closeMenu();
+  emptyInput();
+  emptyInputs();
 });
 
 // ^areaActions
@@ -71,6 +96,8 @@ $("#area").on("click", function () {
   $("#categories-section1").addClass("d-none");
   $("#categories-section2").addClass("d-none");
   $("#categories-section22").addClass("d-none");
+  $("#categories-section4").addClass("d-none");
+  $("#categories-section6").removeClass("d-none");
   $("#searchform").addClass("d-none");
   $("#inputs").addClass("d-none");
   $("#categories-section5").addClass("d-none");
@@ -79,6 +106,9 @@ $("#area").on("click", function () {
   $("#categories-section55556").addClass("d-none");
   $("#categories-section555566").addClass("d-none");
   getArea();
+  closeMenu();
+  emptyInput();
+  emptyInputs();
 });
 
 // ^ingredientsActions
@@ -90,6 +120,7 @@ $("#ingredients").on("click", function () {
   $("#categories-section1").addClass("d-none");
   $("#categories-section2").addClass("d-none");
   $("#categories-section222").addClass("d-none");
+  $("#categories-section6").addClass("d-none");
   $("#searchform").addClass("d-none");
   $("#inputs").addClass("d-none");
   $("#categories-section5").addClass("d-none");
@@ -98,6 +129,9 @@ $("#ingredients").on("click", function () {
   $("#categories-section55556").addClass("d-none");
   $("#categories-section555566").addClass("d-none");
   getIngredients();
+  closeMenu();
+  emptyInput();
+  emptyInputs();
 });
 
 // ^contactActions
@@ -109,29 +143,39 @@ $("#contact").on("click", function () {
   $("#categories-section2").addClass("d-none");
   $("#categories-section22").addClass("d-none");
   $("#categories-section222").addClass("d-none");
+  $("#categories-section4").addClass("d-none");
+  $("#categories-section6").addClass("d-none");
   $("#categories-section5").addClass("d-none");
   $("#categories-section55").addClass("d-none");
   $("#categories-section555").addClass("d-none");
   $("#categories-section5555").addClass("d-none");
   $("#categories-section55556").addClass("d-none");
   $("#categories-section555566").addClass("d-none");
+  closeMenu();
+  emptyInput();
+  emptyInputs();
 });
 
 // ^searchActions
 $("#search").on("click", function () {
   hideAllSections();
   $("#searchform").removeClass("d-none");
-  $("#categories-section555566").removeClass("d-none");
-  $("#categories-section55556").removeClass("d-none");
+  $("#categories-section555566").addClass("d-none");
+  $("#categories-section55556").addClass("d-none");
   $("#categories-section1").addClass("d-none");
   $("#inputs").addClass("d-none");
   $("#categories-section2").addClass("d-none");
-  $("#categories-section22").addClass("d-block");
-  $("#categories-section222").addClass("d-block");
+  $("#categories-section22").addClass("d-none");
+  $("#categories-section222").addClass("d-none");
+  $("#categories-section4").addClass("d-none");
+  $("#categories-section6").addClass("d-none");
   $("#categories-section5").addClass("d-none");
   $("#categories-section55").addClass("d-none");
   $("#categories-section555").addClass("d-none");
   $("#categories-section5555").addClass("d-none");
+  closeMenu();
+  emptyInput();
+  emptyInputs();
 });
 
 //^^^^^^^^^^^^^^^^^^^^^^INPUTs^^^^^^^^^^^^^^^^^^^^^^
@@ -142,6 +186,15 @@ let passwordInput = document.querySelector("#password");
 let emailInput = document.querySelector("#email");
 let ageInput = document.querySelector("#age");
 let repasswordInput = document.querySelector("#repassword");
+
+function emptyInputs() {
+  nameInput.value = "";
+  phoneInput.value = "";
+  passwordInput.value = "";
+  emailInput.value = "";
+  ageInput.value = "";
+  repasswordInput.value = "";
+}
 // ^btnSubmit
 let submitBtn = document.querySelector("#submit-btn");
 // ^alert message

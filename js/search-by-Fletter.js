@@ -42,6 +42,8 @@ function showCards(mealsCard) {
       let mealId = this.getAttribute("data-id");
       getDesc(mealId);
       $("#searchform").addClass("d-none");
+      $("#categories-section555566").removeClass("d-none");
+      $("#categories-section55556").removeClass("d-none");
     });
   });
 }
