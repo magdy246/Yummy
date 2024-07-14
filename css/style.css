@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*&&&&&&&&&&&&&& COLORs &&&&&&&&&&&&&&*/
+    --main-color: #0d0d0d;
+    --placeholder-color: #4d4949;
+    /*&&&&&&&&&&&&&& OTHERs &&&&&&&&&&&&&&*/
+    --transition: 0.7s all;
+}
+
+html body {
+    background-color: var(--main-color);
+}
+
+/* ^^^^^^^^^ SIDE BAR ^^^^^^^^^ */
+#side-bar-section .Bar {
+    transform: translateX(-76%);
+    background-color: var(--main-color);
+    z-index: 99;
+}
+
+#side-bar-section .nav-side1 {
+    transition: transform 0.3s ease;
+    transform: translateY(800%);
+}
+
+#side-bar-section .nav-side2 {
+    transition: transform 0.7s ease;
+    transform: translateY(800%);
+}
+
+#side-bar-section .nav-side3 {
+    transition: transform 1.1s ease;
+    transform: translateY(800%);
+}
+
+#side-bar-section .nav-side4 {
+    transition: transform 1.5s ease;
+    transform: translateY(800%);
+}
+
+#side-bar-section .nav-side5 {
+    transition: transform 1.9s ease;
+    transform: translateY(800%);
+}
+
+#side-bar-section .nav-side1.up,
+#side-bar-section .nav-side2.up,
+#side-bar-section .nav-side3.up,
+#side-bar-section .nav-side4.up,
+#side-bar-section .nav-side5.up {
+    transform: translateY(0%);
+}
+
+#side-bar-section .Bar {
+    transition: transform 0.8s ease;
+    transform: translateX(-76%);
+}
+
+#side-bar-section .Bar.open {
+    transform: translateX(0%);
+}
+
+.list-btn.hidden,
+.close-btn.hidden {
+    display: none;
+}
+
+.list-btn,
+.close-btn {
+    cursor: pointer;
+}
+
+.close-btn {
+    display: none;
+}
+
+/* ^^^^^^^^^ CATEGORIES-SECTION ^^^^^^^^^ */
+#categories-section1 figure .bg-details,
+#categories-section2 figure .bg-details,
+#categories-section22 figure .bg-details,
+#categories-section222 figure .bg-details,
+#categories-section3 figure .bg-details,
+#searchform figure .bg-details,
+#categories-section5 figure .bg-details {
+    background-color: #fff;
+    opacity: 0.8;
+    transition: var(--transition);
+    top: 120%;
+}
+
+#categories-section1 figure:hover .bg-details,
+#categories-section2 figure:hover .bg-details,
+#categories-section22 figure:hover .bg-details,
+#categories-section222 figure:hover .bg-details,
+#categories-section3 figure:hover .bg-details,
+#searchform figure:hover .bg-details,
+#categories-section5 figure:hover .bg-details {
+    top: 0;
+}
+
+#searchform input::placeholder {
+    color: var(--placeholder-color)
+}
+
+.display-search,
+.display-inputs {
+    display: none;
+}
+
+/* ^^^^^^^^^ LOADER ^^^^^^^^^ */
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 100px;
+    aspect-ratio: 1;
+    display: grid;
+    -webkit-mask: conic-gradient(from 15deg, #0000, #000);
+    animation: l26 1s infinite steps(12);
+}
+
+.loader,
+.loader:before,
+.loader:after {
+    background:
+        radial-gradient(closest-side at 50% 12.5%,
+            #f5dd02 96%, #0000) 50% 0/20% 80% repeat-y,
+        radial-gradient(closest-side at 12.5% 50%,
+            #f5dd02 96%, #0000) 0 50%/80% 20% repeat-x;
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    grid-area: 1/1;
+    transform: rotate(30deg);
+}
+
+.loader:after {
+    transform: rotate(60deg);
+}
+
+@keyframes l26 {
+    100% {
+        transform: rotate(1turn)
+    }
+}
