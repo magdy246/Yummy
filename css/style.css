@@ -94,7 +94,7 @@ html body {
     background-color: #fff;
     opacity: 0.8;
     transition: var(--transition);
-    top: 120%;
+    top: 190%;
 }
 
 #categories-section1 figure:hover .bg-details,
@@ -117,7 +117,6 @@ html body {
 }
 
 /* ^^^^^^^^^ LOADER ^^^^^^^^^ */
-/* HTML: <div class="loader"></div> */
 .loader {
     width: 100px;
     aspect-ratio: 1;
