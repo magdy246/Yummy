@@ -10,7 +10,7 @@ export async function getMealsByFletter(Fletter) {
     <div class="loader"></div>
     </div>`);
     let response = await fetch(
-      `https://themealdb.com/api/json/v1/1/search.php?s=${Fletter}`
+      `https://themealdb.com/api/json/v1/1/search.php?f=${Fletter}`
     );
     let result = await response.json();
     let mealsCard = result.meals;
